@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+   margin: 0%;
+   padding: 0%; 
+   background-color: rgb(95, 158, 160,0.1);
+}
+
+.navbar{
+    background-color:rgb(95, 158, 160,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.list{
+    margin-right: 1rem;
+}
+
+.list li a{
+    text-decoration: none;
+    display: block;
+    color: rgb(59, 101, 102);
+    padding: 0.7rem;
+}
+
+.list li:hover{
+    background-color: rgb(95, 158, 160,0.7);
+}
+
+.websiteName a{
+    text-decoration: none;
+    color: rgb(59, 101, 102);
+    font-size: 30px;
+    margin:0.3rem;
+}
+
+ul{
+    margin:0px;
+    padding: 0px;
+    display: flex; 
+    list-style-type: none;
+}
+
+.toggle-button{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 17px;
+}
+
+.toggle-button .bar{
+    width: 100%;
+    height: 3px;
+    background-color: rgb(59, 101, 102);
+    border-radius:10rem;
+}
+
+
+@media (max-width: 500px){
+    .toggle-button{
+        display: flex;
+    }
+
+    .list{
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .list ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .list li {
+        width: 100%;
+    }
+
+    .list.active{
+        display: flex;
+    }
+}
